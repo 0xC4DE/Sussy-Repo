@@ -21,8 +21,8 @@ This post was made by the Peter Griffin Gang
     };
 
     function playAndDoItAgain(audio) {
+        audio.play()
         setTimeout(function() {
-            await audio.play()
             audio.pause()
             audio.currentTime = 0;
             playAndDoItAgain(audio)
@@ -41,6 +41,7 @@ This post was made by the Peter Griffin Gang
         }
         
         audios.forEach((audio) => {
+            sleep(random)
             playAndDoItAgain(audio)
         });
     }
