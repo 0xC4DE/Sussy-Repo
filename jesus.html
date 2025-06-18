@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>OUR LORD AND SAVIOR</title>
+<link rel="shortcut icon" href="https://ci.phncdn.com/www-static/favicon.ico?cache=2021040802" />
+</head>
+<body>
+<h1 style="font-size:100"><marquee scrollamount="30">HEY LOIS,
+JESUS CHRIST IS A REPUBLICAN</marquee></h1>
+<img src=
+"https://upload.wikimedia.org/wikipedia/en/c/c2/Peter_Griffin.png">
+This post was made by the Peter Griffin Gang
+
+<button id="thefunnybutton" onclick="theFunny()">This page is funnier if you click here</button>
+</body>
+</html>
+
+<script type="text/javascript">
+    function random() {
+        return Math.floor(Math.random() * (3-.25+1)) + .25;
+    };
+
+    function playAndDoItAgain(audio) {
+        audio.play()
+        setTimeout(function() {
+            audio.pause()
+            audio.currentTime = 0;
+            playAndDoItAgain(audio)
+        }, random())
+    }
+
+    var audios = [];
+    function theFunny() {
+        document.getElementById("thefunnybutton").style.display = "none";
+        for (var i = 0; i<10; i++) {
+            audio = document.createElement("audio");
+            audio.src = "funny/fart-with-reverb.mp3";
+            audio.pause();
+            audio.currentTime = 0;
+            audios.push(audio)
+            }
+        
+        audios.forEach((audio) => {
+            playAndDoItAgain()
+        });
+    }
+
+</script>
