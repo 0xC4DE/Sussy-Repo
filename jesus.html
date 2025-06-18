@@ -26,7 +26,7 @@ This post was made by the Peter Griffin Gang
             audio.pause()
             audio.currentTime = 0;
             playAndDoItAgain(audio)
-        }, random())
+        }, random()*1000)
     }
 
     var audios = [];
@@ -43,7 +43,7 @@ This post was made by the Peter Griffin Gang
         audios.forEach((audio) => {
             setTimeout(
                 playAndDoItAgain(audio)
-                , random()
+                , random()*1000
             );
         });
     }
