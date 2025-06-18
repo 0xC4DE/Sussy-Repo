@@ -17,12 +17,12 @@ This post was made by the Peter Griffin Gang
 
 <script type="text/javascript">
     function random() {
-        return Math.floor(Math.random() * (3-.25+1)) + .25;
+        return Math.floor(Math.random() * (5-1+1)) + 1;
     };
 
     function playAndDoItAgain(audio) {
-        audio.play()
         setTimeout(function() {
+            await audio.play()
             audio.pause()
             audio.currentTime = 0;
             playAndDoItAgain(audio)
@@ -38,7 +38,7 @@ This post was made by the Peter Griffin Gang
             audio.pause();
             audio.currentTime = 0;
             audios.push(audio)
-            }
+        }
         
         audios.forEach((audio) => {
             playAndDoItAgain(audio)
