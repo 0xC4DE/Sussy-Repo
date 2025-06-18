@@ -41,8 +41,10 @@ This post was made by the Peter Griffin Gang
         }
         
         audios.forEach((audio) => {
-            sleep(random)
-            playAndDoItAgain(audio)
+            setTimeout(
+                playAndDoItAgain(audio)
+                , random()
+            );
         });
     }
 
